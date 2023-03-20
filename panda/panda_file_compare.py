@@ -1,8 +1,16 @@
 import os
 import pandas as pd
 import numpy as np
+import configparser
 
+config = configparser.RawConfigParser()
 
+config_FILE_path = 'panda_file_compare.cfg'
+config.read(config_FILE_path)
+
+details_dict = dict(config.items('File_PATH'))
+
+print(details_dict)
 print("PATH", os.getcwd())
 path  = os.getcwd()
 path_to_sample_data = '/sample_data/'   
