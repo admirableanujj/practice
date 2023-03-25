@@ -9,7 +9,6 @@ lines.sort()
 ans = 0
 x = '"COLIN"' 
 for line in lines:
-    # line = line.replace('"','')
     fact_1 = 0
     for letter in line.replace('"',''):
         fact_1 += alphabets.index(letter)+1
@@ -21,7 +20,6 @@ print(ans)
 ans2 = 0
 for line in lines:
     if line == x:
-        # line = line.replace('"','')
         fact_1 = 0
         for letter in line.replace('"',''):
             fact_1 += alphabets.index(letter)+1
@@ -30,8 +28,3 @@ for line in lines:
         ans2+=fact_1*fact_2        
 
 print(ans2)        
-
-
-# print(lines)
-
-# print(type("CLAY"))
