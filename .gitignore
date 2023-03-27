@@ -1,4 +1,5 @@
 /sample_data/*
 temp.py
 /panda/*.cfg
-panda/data/
+p022_names.txt
+panda/data/*

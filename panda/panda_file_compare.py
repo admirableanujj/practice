@@ -3,15 +3,14 @@ import pandas as pd
 import numpy as np
 import configparser
 import string
-from difflib import SequenceMatcher
+
 
 def match_percent(x,y):
-    return SequenceMatcher(None, str(x), str(y)).ratio()
+    return x+y
 
-# details_dict = dict(config.items('File_PATH'))
 
 config = configparser.ConfigParser()
-config_FILE_path = 'C:/Projects_VnV/practice/panda/panda_file_compare.cfg'
+config_FILE_path = 'C:/Users/anujj/OneDrive - University of Cincinnati/Projects/ProjectEuler/panda/panda_file_compare.cfg'
 config.read(config_FILE_path)
     
 details_dict = config.sections()
@@ -35,22 +34,13 @@ compare_df  = pd.DataFrame()
 # compare_df['A']=pd.Series([10,20,30],index=['a','b','c'])
 # compare_df["A"] = None
 # compare_df["A"] = np.where(df1_sheet1['A']+df2_sheet1['X'] >=20, 'True', 'False')
-
-#################################################Section###################################
-# print(df1_sheet1)
-# print(df2_sheet1)
-##############################################END############################################
-
 r,c = df1_sheet1.shape
 np.full((r,c),np.nan)
-asciiupper = list(string.ascii_uppercase)
-# compare_df=pd.DataFrame(data=np.full((r,c),np.nan),index=asciiupper[:c])
-compare_df=pd.DataFrame(data=np.full((r,c),np.nan))
-
-for i in df1_sheet1.columns:
-    # print(f'i: {df1_sheet1[i]}')
-    compare_df[i] = np.where(match_percent(df1_sheet1[i],df2_sheet1[i])*100 >=50, match_percent(df1_sheet1[i],df2_sheet1[i]), None)
-
+asciilower = list(string.ascii_lowercase)
+compare_df=pd.DataFrame(data=np.full((r,c),np.nan),index=asciilower[:c])
+compare_df["c"] = np.where(df1_sheet1['X']+df2_sheet1['A'] >=5, 10, 11)
+print(df1_sheet1)
+print(df2_sheet1)
 print(compare_df)
 
 
