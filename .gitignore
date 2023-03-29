@@ -2,3 +2,6 @@
 temp.py
 /panda/*.cfg
 p022_names.txt
+panda/data/*
+p022_names.txt
+__pycache__/
