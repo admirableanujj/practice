@@ -12,5 +12,11 @@ class quick_math:
             if x%i == 0:
                 factors.append(i)
         return factors
-
-
+    
+    @staticmethod
+    def factorial(x):
+        if x<1:
+            return 1
+        i = x*quick_math.factorial(x-1)
+        return i
+        
