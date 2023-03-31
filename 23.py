@@ -27,6 +27,7 @@ for key in ans.keys():
     if ans[key]:
         continue
     else:
+        print(key)
         total+=key
     
 print(total)
