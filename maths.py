@@ -16,7 +16,14 @@ class quick_math:
     @staticmethod
     def factorial(x):
         if x<1:
-            return 1
-        i = x*quick_math.factorial(x-1)
-        return i
+            return 1 
+        return x*quick_math.factorial(x-1)
+    
+    @staticmethod
+    def permutation(n,r):
+        return quick_math.factorial(n)/quick_math.factorial(n-r)
+    @staticmethod
+    def combination(n,r):
+        divisor = quick_math.factorial(r)*quick_math.factorial(n-r) 
+        return quick_math.factorial(n)/divisor
         
