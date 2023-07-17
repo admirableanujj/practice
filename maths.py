@@ -3,7 +3,8 @@
 
 class quick_math:
     def __init__(self):
-        factors =  None
+        # factors =  None
+        pass
 
     @staticmethod
     def factors(x):
@@ -26,4 +27,20 @@ class quick_math:
     def combination(n,r):
         divisor = quick_math.factorial(r)*quick_math.factorial(n-r) 
         return quick_math.factorial(n)/divisor
+    
+    @staticmethod
+    def isprime(x):
+        factors = quick_math.factors(x)
+        if len(factors) == 1:
+            return True
+        return False
+    
+    @staticmethod
+    def progress_bar(x):
+        print("\r", end="")
+        if x%2==0:
+            print("{:1} ".format(x), end="")
+        else:
+            print("{:1} ".format("  "), end="")
+        
         

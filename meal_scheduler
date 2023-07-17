@@ -1,0 +1,25 @@
+import random
+Breakfast = ('CornFlakes','Sandwiches','Fruits','Bagels')
+Lunch = ('Yellow Dal','Black Dal','Kichdi', 'Chole', 'Rajma')
+Dinner = ('Fried Rice','Parathe','Salads')
+hiTea = ('Bhel','Samosa','Chips+Avocado')
+
+def entryFormatter(meal):
+    dish = meal[random.randint(0,len(meal)-1)]
+    if len(dish)<=20:
+        dish = dish.rjust(19,' ')
+    else:
+        dish = dish[0:19]    
+    return str(dish)
+        
+
+
+print("======================================================================================================================================================")
+print("=====================================================================================================Meal Schedule====================================")
+print("======================================================================================================================================================")
+print("         |     Monday        |     Tuesday       |     Wednesday     |     Thursday      |     Friday        |     Saturday      |     Sunday        |")
+print("==================================================================================================================================================================================================================")
+print(f"Breakfast|{entryFormatter(Breakfast)}|{entryFormatter(Breakfast)}|{entryFormatter(Breakfast)}|{entryFormatter(Breakfast)}|{entryFormatter(Breakfast)}|         |         |         |         |")
+print(f"Lunch    |{entryFormatter(Lunch)}|{entryFormatter(Lunch)}|{entryFormatter(Lunch)}|{entryFormatter(Lunch)}|{entryFormatter(Lunch)}|         |         |         |         |")
+print(f"Dinner   |{entryFormatter(Dinner)}|{entryFormatter(Dinner)}|{entryFormatter(Dinner)}|{entryFormatter(Dinner)}|{entryFormatter(Dinner)}|         |         |         |         |")
+print(f"Hi-Tea   |{entryFormatter(hiTea)}|{entryFormatter(hiTea)}|{entryFormatter(hiTea)}|{entryFormatter(hiTea)}|{entryFormatter(hiTea)}|         |         |         |         |")
