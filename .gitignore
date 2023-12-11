@@ -6,3 +6,4 @@ p022_names.txt
 panda/data/*
 p022_names.txt
 __pycache__/
+*_bkp
