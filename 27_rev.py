@@ -13,11 +13,11 @@ while a<1000:
         while math.isprime(x*x+a*x+b):
             ans_list.append(x*x+a*x+b)
             if a > 0:
-                ans_dict[f'x*x+{a}x+{b}'] = ans_list
-                finol[f'x*x+{a}x+{b}'] = len(ans_list)
+                ans_dict[f'n*n+{a}x+{b}'] = ans_list
+                finol[f'n*n+{a}n+{b}'] = len(ans_list)
             else:
-                ans_dict[f'x*x{a}x+{b}'] = ans_list
-                finol[f'x*x{a}x+{b}'] = len(ans_list)                
+                ans_dict[f'n*n{a}n+{b}'] = ans_list
+                finol[f'n*n{a}n+{b}'] = len(ans_list)                
             x+=1
         
         b+=1
@@ -26,4 +26,7 @@ while a<1000:
 # print(ans_dict)
 print(list(finol.keys())[list(finol.values()).index(max(finol.values()))])
 print(ans_dict[list(finol.keys())[list(finol.values()).index(max(finol.values()))]])
+a=-61
+b=971
+print(f'answer:{a*b}')
     
